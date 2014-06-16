@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>recruit</title>
+<link rel="stylesheet" href="reset.css">
+<style>
+body { background: #FCF2D6; padding: 0 0 30px 0; }
+a { text-decoration: none; }
+.space { height: 1000px; }
+.fixed { position: fixed; left: 0; right: 0; }
+.fsz0 { font-size: 0; }
+.vTop { vertical-align: top; }
+.lighter { opacity: .5; }
+
+
+
+/* 面板 */
+#panel { top: 2%; margin: 0 auto; width: 760px; height: 300px; line-height: 300px; text-align: center; border-radius: 10px; background: #FD7773; font-size: 40px; font-family: "方正稚艺简体", "微软雅黑", "黑体", "宋体"; color: #fff; }
+#panel:hover {
+	background: #FF5E52;
+}
+/* 个人信息 */
+#infoText { position: absolute; top: 430px; width: 100%; text-align: center; font-size: 50px; font-family: '方正稚艺简体','Microsoft YaHei', 'SimHei'; color: #6CBF6C; }
+#info-1 { display: none; left: 15%; top: 10%; font-size: 30px; }
+#info-1 pre { font-family: '方正稚艺简体','Microsoft YaHei', 'SimHei'; font-weight: bold; }
+.consolas { font-family: 'consolas'; }
+
+/* 技能 */
+.abText { width: 100%; text-align: center; font-family: '方正稚艺简体','Microsoft YaHei', 'SimHei'; font-size: 60px; color: #6CBF6C; }
+/* 技能能力条 */
+#abTitle { width: 100%; text-align: center; background: #8C6239; }
+#abTitle span { font-size: 40px; font-family: '方正稚艺简体','Microsoft YaHei', 'SimHei'; color: #fff; }
+#bad { position: absolute;left: 20%; }
+#not_bad { position: absolute;left: 50%; }
+#good { position: absolute;left: 80%; }
+
+/* 技能条 */
+#abilities li { height: 90px; padding: 0 0 0 10px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-family: '方正稚艺简体','Microsoft YaHei', 'SimHei'; font-size: 40px; line-height: 90px; color: #fff; cursor: default; }
+#abilities #ab-1 { background: #FF3F3F; }
+#abilities #ab-2 { background: #FE9321; }
+#abilities #ab-3 { background: #FDDD19; }
+#abilities #ab-4 { background: #B3E127; }
+#abilities #ab-5 { background: #5FE0F5; }
+#abilities #ab-6 { background: #428BCA; }
+#abilities #ab-7 { background: #B558BD; }
+#abilities #ab-8 { background: #FF3F3F; }
+#abilities #ab-9 { background: #FE9321; }
+#abilities #ab-10 { background: #FDDD19; }
+
+/* more */
+#more { margin: 0 auto; width: 960px; }
+#more div {
+	vertical-align: top; 
+	display: inline-block;
+	width: 33%;
+	height: 200px;
+	line-height: 200px;
+	text-align: center;
+	font-size: 40px;
+	font-family: '方正稚艺简体','Microsoft YaHei', 'SimHei';
+	-webkit-transition: all .5s ease 0;
+	-moz-transition: all .5s ease 0;
+	transition: all .5s ease 0;
+}
+#more div:hover { line-height: 180px; }
+#more a { display: block; color: #FAAD3A; cursor: pointer; }
+#more a:hover { color: #FF8000; }
+/* 调试条 */
+#conInfo { position: fixed; left: 0; top: 0; }
+</style>
+</head>
+<body>
+	<p class="space"><!-- height: 1000px --></p>
+	<p class="space"><!-- height: 1000px --></p>
+	<p class="space"><!-- height: 1000px --></p>
+	<p class="space"><!-- height: 1000px --></p>
+	<p class="space"><!-- height: 1000px --></p>
+	
+
+	<!-- 面板 -->
+	<div id="panel" class="fixed" data-0="transform:rotate(0deg); transform-origin:50% 0; opacity:1;"
+								data-_panel-500="transform:rotate(180deg); transform-origin:50% 0; opacity:0;"
+								data-_panel-500-end=""
+								data-end="transform:rotate(360deg); transform-origin:50% 0; opacity:1;">
+		我的简历
+	</div>
+	
+	<!-- 个人信息 -->
+	<div id="infoText">
+		个人信息<br>
+		<div id="arrow">↓</div>
+	</div>
+
+	<div id="info-1" class="info fixed" data-_info="display:block; transform:scale(0) rotate(0deg); opacity:0;"
+									data-_info-700="display:block; transform:scale(1) rotate(1440deg); opacity:1;" 
+									data-_info-1600=""
+									data-_info-1900='display:none; transform:scale(4) rotate(2880deg); opacity:0;'>
+		<pre>
+姓名：沈瑾宇		性别：男
+
+出生日期：<span class="consolas">1992-12-09</span>	居住地：广州从化
+
+就读院校：广州大学华软软件学院
+
+专业：软件工程软件开发方向
+
+联系方式：Tel <span class='consolas'>18825195540</span>		Email <span class="consolas">2418488386@qq.com</span>
+		</pre>
+	</div>
+	
+
+	<!-- 技能 -->
+	<div class="abText fixed" data-_ab="display:block; top:100%;"
+						data-_ab-700="top:20%"
+						data-_ab-1500
+						data-_ab-2500="display:none; top:-100%;">
+		专业技能
+	</div>
+	<div class="abText fixed" data-0='display:none;' data-_ab-800='display:block;top:25%;' data-_ab-1500='display:none;'>.</div>
+	<div class="abText fixed" data-0='display:none;' data-_ab-950='display:block;top:30%;' data-_ab-1500='display:none;'>.</div>
+	<div class="abText fixed" data-0='display:none;' data-_ab-1100='display:block;top:35%;' data-_ab-1500='display:none;'>.</div>
+	<div class="abText fixed" data-0='display:none;' data-_ab-1250='display:block;top:40%;' data-_ab-1500='display:none;'>.</div>
+	<div class="abText fixed" data-0='display:none;' data-_ab-1400='display:block;top:45%;' data-_ab-1500='display:none;'>.</div>
+
+	<!-- 技能能力条 -->
+	<div id="abTitle" class="fixed" data-_ab-1100="display:block; top:100%; opacity:1"
+									data-_ab-2400="top:0"
+									data-4947
+									data-4948='opacity:.5'
+									data-5866
+									data-_ab-4500="display:none; opacity:0;">
+		<span id="bad" class='evl'>(╯3╰)</span>
+		<span id="not_bad" class='evl'>Not Bad</span>
+		<span id="good" class='evl'>Good</span>
+		<span>&nbsp;</span>
+	</div>
+
+	<!-- 技能条 -->
+	<ul id="abilities">
+		<li id='ab-1' data-bottom-top='width:0%' data-center-center='width:100%' >
+			熟悉盒子模型，熟练使用div+css进行页面排版
+		</li>
+		<li id='ab-2' data-bottom-top='width:0%' data-center-center='width:100%'>
+			对组织css有一定心得，了解reset, hack, sprite
+		</li>
+		<li id='ab-3' data-bottom-top='width:0%' data-center-center='width:50%'>
+			解决过不同浏览器样式兼容问题
+		</li>
+		<li id='ab-4' data-bottom-top='width:0%' data-center-center='width:70%'>
+			熟悉常用DOM操作，事件监听机制
+		</li>
+		<li id='ab-5' data-bottom-top='width:0%' data-center-center='width:50%'>
+			掌握ajax常用操作，JS跨域
+		</li>
+		<li id='ab-6' data-bottom-top='width:0%' data-center-center='width:40%'>
+			能写出面向对象风格的js代码
+		</li>
+		<li id='ab-7' data-bottom-top='width:0%' data-center-center='width:70%'>
+			熟练使用jquery, 接触过mootools
+		</li>
+		<li id='ab-8' data-bottom-top='width:0%' data-center-center='width:30%'>
+			使用过audioAPI和canvasAPI, 使用过css3动画
+		</li>
+		<li id='ab-9' data-bottom-top='width:0%' data-center-center='width:100%'>
+			熟练使用fireworks切图，sublime编写代码，开发者工具调试
+		</li>
+		<li id='ab-10' data-bottom-top='width:0%' data-center-center='width:70%'>
+			学习过java，php等服务器端语言, 英语6级
+		</li>
+	</ul>
+
+
+	<!-- 更多 -->
+	<div id="more" class='fixed fsz0' data-start='display:none;opacity:0;top:100%' data-400-end data-100-end='display:block;opacity:0;' data-end='opacity:1;top:60%;'>
+		<div id="paper-recruit"><a href="">表格简历</a></div>
+		<div id="myDemo"><a href="">我的demo</a></div>
+		<div id="up"><a href="" onclick="goTop();return false;">再看一遍</a></div>
+	</div>
+
+	<!-- 调试条 -->
+	<span id='conInfo'></span>
+
+<script src='skrollr.min.js'></script>
+<script src='goTop.js'></script>
+<script>
+function log(info){ console.log(info); }
+function $(selector){ return document.querySelector(selector); }
+</script>
+<script>
+
+/*决定什么时候出现*/
+skrollr.init({
+	constants: {
+		panel: 0,
+		info: 500,
+		ab: 2200
+	}
+});
+
+(function(){
+	var panel = document.getElementById('panel'),
+		abTitle = document.getElementById('abTitle'),
+		conInfo = document.getElementById('conInfo'),
+		arrow = document.getElementById('arrow');
+	window.onscroll = function(){
+		/*兼容FF IE Chrome*/
+		var scrollTop = document.body.scrollTop + document.documentElement.scrollTop;
+		scrollTop>=1591 ? panel.innerHTML='求职意向: web前端开发实习' : panel.innerHTML='我的简历';
+		conInfo.innerHTML = scrollTop;
+		log(scrollTop);
+	}
+
+	/*面板事件：提示开启平滑滚动*/
+	panel.onmouseover = function(){
+		this.innerHTML.indexOf('我的简历')!=-1 && (this.innerHTML='开启平滑滚动效果更佳');
+	};
+	panel.onmouseout = function(){
+		this.innerHTML='我的简历';
+	};
+
+	/*下拉箭头闪烁*/
+	setInterval(function(){
+		var exist = arrow.innerHTML;
+		exist ? arrow.innerHTML = '' : arrow.innerHTML = '↓';
+	}, 600);
+})();
+</script>
+</body>
+</html>
